@@ -3,12 +3,12 @@
   "name": "Time has come",
   "icons": [
     {
-      "src": "/images/icons-192.png",
+      "src": "/img/icons-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/images/icons-512.png",
+      "src": "/img/icons-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -24,14 +24,14 @@
       "short_name": "Features",
       "description": "View weather information for today",
       "url": "/index.html#download,
-      "icons": [{ "src": "/images/today.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/img/today.png", "sizes": "192x192" }]
     },
     {
       "name": "Let's Download",
       "short_name": "Download",
       "description": "Download",
       "url": "/index.html#download",
-      "icons": [{ "src": "/images/features.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/img/features.png", "sizes": "192x192" }]
     }
   ]
 }
