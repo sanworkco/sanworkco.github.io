@@ -23,7 +23,7 @@
       "name": "What are Features?",
       "short_name": "Features",
       "description": "View weather information for today",
-      "url": "/index.html#download,
+      "url": "/index.html#features",
       "icons": [{ "src": "/img/today.png", "sizes": "192x192" }]
     },
     {
