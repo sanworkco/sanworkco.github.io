@@ -24,7 +24,7 @@
       "short_name": "Features",
       "description": "View weather information for today",
       "url": "/index.html#features",
-      "icons": [{ "src": "/img/today.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/img/icons-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Let's Download",
