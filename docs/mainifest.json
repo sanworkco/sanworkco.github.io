@@ -30,7 +30,7 @@
       "name": "Let's Download",
       "short_name": "Download",
       "description": "Download",
-      "url": "/index.html#download",
+      "url": "/index.html/#download",
       "icons": [{ "src": "/img/features.png", "sizes": "192x192" }]
     }
   ]
