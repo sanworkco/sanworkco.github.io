@@ -14,7 +14,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "google.com",
+  "start_url": "/index.html#download",
   "background_color": "#3367D6",
   "display": "standalone",
   "scope": "/",
@@ -24,7 +24,7 @@
       "name": "What are Features?",
       "short_name": "Features",
       "description": "View weather information for today",
-      "url": "/index.html/#download",
+      "url": "/index.html/#features",
       "icons": [{ "src": "/img/icons-192.png", "sizes": "192x192" }]
     },
     {
