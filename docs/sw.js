@@ -1,0 +1,28 @@
+//sandeep
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // Registration failed
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
+self.addEventListener("install", installEvent => {
+  const assets = [
+    '/', // Root path or your index.html
+    '/styles.css',
+    '/script.js',
+    '/images/logo.png'
+    // Add any other static assets you want to cache
+  ];
+
+  installEvent.waitUntil(
+    caches.open('staticDevCoffee').then(cache => {
+      return cache.addAll(assets);
+    })
+  );
+});
