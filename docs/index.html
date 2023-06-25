@@ -45,7 +45,74 @@
         console.error('Service Worker registration failed:', error);
       });
   }
-</script>
+    // Capturing a Photo
+    const photoInput = document.getElementById('photo-input');
+
+    photoInput.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+
+      if (file && file.type.includes('image')) {
+        const reader = new FileReader();
+
+        reader.onload = function(event) {
+          const photoDataUrl = event.target.result;
+          // Do something with the photo data URL
+          // e.g., display the photo preview on the page
+          const previewImg = document.createElement('img');
+          previewImg.src = photoDataUrl;
+          document.body.appendChild(previewImg);
+        }
+
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Accessing User's Location
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        // Do something with the latitude and longitude values
+        // e.g., display the location on the page
+        const locationElement = document.getElementById('location');
+        locationElement.textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
+      }, function(error) {
+        console.error('Error accessing location:', error);
+      });
+    } else {
+      console.error('Geolocation is not supported in this browser');
+    }
+
+    // File Upload
+    const fileInput = document.getElementById('file-input');
+    const uploadButton = document.getElementById('upload-btn');
+
+    uploadButton.addEventListener('click', function() {
+      const file = fileInput.files[0];
+
+      if (file) {
+        const formData = new FormData();
+        formData.append('file', file);
+
+        // Send the file to the server using AJAX or fetch API
+        // Example using fetch API:
+        fetch('/upload', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          // Handle the server response
+          console.log('File uploaded:', data);
+        })
+        .catch(error => {
+          console.error('Error uploading file:', error);
+        });
+      }
+    });
+  </script>
+
 </head>
 
 <body id="page-top">
