@@ -76,7 +76,7 @@
         // Do something with the latitude and longitude values
         // e.g., display the location on the page
         const locationElement = document.getElementById('location');
-        locationElement.textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
+        locationElement.textContent =  locationElement.textContent+ `Latitude: ${latitude}, Longitude: ${longitude}`;
       }, function(error) {
         console.error('Error accessing location:', error);
       });
@@ -157,7 +157,7 @@
 new
 </h1>
  <!-- Location Display -->
-  <p id="location"> my locatio</p>
+  <p id="location"> my location</p>
 
 <!-- Photo Capture -->
   <input type="file" accept="image/*" id="photo-input">
