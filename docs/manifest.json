@@ -1,17 +1,16 @@
 {
-  
   "short_name": "MyPwa100",
-  "name": "..Time has come, Don't think just do it",
+  "name": "Time has come",
   "icons": [
     {
-      "src": "/img/gif.gif",
-      "type": "image/gif",
+      "src": "/img/icons-192.png",
+      "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/img/gif.gif",
-      "type": "image/gif",
-      "sizes": "100%"
+      "src": "/img/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": "/index.html#download",
@@ -24,15 +23,25 @@
       "name": "What are Features?",
       "short_name": "Features",
       "description": "View weather information for today",
-      "url": "/index.html#features",
+      "url": "/index.html/#features",
       "icons": [{ "src": "/img/icons-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Let's Download",
       "short_name": "Download",
       "description": "Download",
-      "url": "/index.html#download",
+      "url": "/index.html/#download",
       "icons": [{ "src": "/img/features.png", "sizes": "192x192" }]
     }
-  ]
+  ],
+  "splash_screen": {
+    "launch_background_color": "#3367D6",
+    "assets": [
+      {
+        "src": "/img/mysplash.png",
+        "sizes": "1280x720",
+        "type": "image/png"
+      }
+    ]
+  }
 }
