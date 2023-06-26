@@ -68,6 +68,16 @@
     });
 
     // Accessing User's Location
+
+
+
+if (navigator.permissions) {
+  navigator.permissions.query({ name: 'geolocation' }).then(function(permissionStatus) {
+    if (permissionStatus.state === 'granted') {
+      // Geolocation permission granted, you can proceed with accessing the location
+
+
+//
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
         const latitude = position.coords.latitude;
@@ -84,6 +94,24 @@
     } else {
       console.error('Geolocation is not supported in this browser');
     }
+//
+
+    } else if (permissionStatus.state === 'prompt') {
+      // Geolocation permission prompt, user hasn't made a decision yet
+    } else if (permissionStatus.state === 'denied') {
+      // Geolocation permission denied, handle accordingly
+    }
+  }).catch(function(error) {
+    console.error('Error checking geolocation permission:', error);
+  });
+} else {
+  console.error('Geolocation API is not supported in this browser.');
+}
+
+
+
+
+
 
     // File Upload
     const fileInput = document.getElementById('file-input');
