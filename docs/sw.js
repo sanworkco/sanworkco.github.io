@@ -16,7 +16,8 @@ self.addEventListener("install", installEvent => {
     '/', // Root path or your index.html
     '/styles.css',
     '/script.js',
-    '/images/logo.png'
+    '/images/logo.png',
+'/img/*'
     // Add any other static assets you want to cache
   ];
 
