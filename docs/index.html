@@ -76,7 +76,8 @@
         // Do something with the latitude and longitude values
         // e.g., display the location on the page
         const locationElement = document.getElementById('location');
-        locationElement.textContent =  locationElement.textContent+ `Latitude: ${latitude}, Longitude: ${longitude}`;
+          alert(locationElement.textContent );
+        locationElement.textContent =  locationElement.textContent + `Latitude: ${latitude}, Longitude: ${longitude}`;
       }, function(error) {
         console.error('Error accessing location:', error);
       });
